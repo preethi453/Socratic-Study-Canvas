@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#09090B;
+    color:#F4F4F5;
+    overflow-x:hidden;
+}
+
+/* ================= ROOT ================= */
+
+#root{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+    isolation:isolate;
+}
+
+/* Decorative background */
+
+#root::before{
+    content:"";
+    position:fixed;
+    top:-200px;
+    right:-200px;
+    width:550px;
+    height:550px;
+    background:radial-gradient(circle, rgba(99,102,241,.35), transparent 70%);
+    filter:blur(60px);
+    pointer-events:none;
+    z-index:-1;
+}
+
+#root::after{
+    content:"";
+    position:fixed;
+    bottom:-250px;
+    left:-200px;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle, rgba(139,92,246,.35), transparent 70%);
+    filter:blur(60px);
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* Hide glow during fullscreen */
+
+:fullscreen #root::before,
+:fullscreen #root::after{
+    display:none;
+}
+
+/* ================= LINKS ================= */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    width:100%;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3F3F46;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#09090B;
+}

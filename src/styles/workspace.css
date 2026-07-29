@@ -1,0 +1,234 @@
+.workspace{
+    display:flex;
+    flex-direction:column;
+    height:700px;
+}
+
+/* ================= HEADER ================= */
+
+.workspace-header{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding:24px;
+}
+
+.workspace-header h2{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.workspace-header p{
+    color:#8f97bc;
+    font-size:12px;
+    line-height:1.2;
+}
+
+.workspace-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.workspace-actions button{
+    height:40px;
+    padding:0 16px;
+    border:none;
+    border-radius:12px;
+    background:#171d33;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    transition:.25s;
+    font-size:14px;
+    font-weight:600;
+}
+
+.workspace-actions button:hover{
+    background:#7c3aed;
+    transform:translateY(-2px);
+}
+
+.workspace-actions button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+.icon-btn{
+    width:48px;
+    justify-content:center;
+    padding:0;
+}
+
+/* ================= GRAPH CARD ================= */
+
+.graph-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    min-height:560px;
+
+    height:auto;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+/* ================= TOP BAR ================= */
+.graph-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
+}
+.graph-top{
+    height:65px;
+    padding:0 24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.graph-title{
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+}
+
+.graph-status{
+    color:#22c55e;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ================= GRAPH ================= */
+
+.graph-container{
+
+    flex:1;
+
+    width:100%;
+
+    min-height:500px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at center,
+        #18213d 0%,
+        #101726 70%,
+        #0b1020 100%);
+}
+
+/* ================= React Flow ================= */
+
+.react-flow{
+    width:100% !important;
+    height:100% !important;
+}
+
+.react-flow__renderer{
+    width:100%;
+    height:100%;
+}
+
+.react-flow__node{
+    border-radius:16px;
+    border:none;
+    background:#151d33;
+    color:white;
+    padding:10px;
+    font-size:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.react-flow__edge-path{
+    stroke:#7c3aed;
+    stroke-width:2;
+}
+
+.react-flow__controls{
+    background:#171d33;
+    border:none;
+}
+
+.react-flow__controls button{
+    background:#171d33;
+    color:white;
+}
+
+.react-flow__minimap{
+    background:#11182b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+.workspace-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.workspace-actions{
+    width:100%;
+}
+
+.graph-card{
+    height:600px;
+}
+
+}
+/* ================= FULLSCREEN ================= */
+.graph-card:fullscreen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    background: #0b1120;
+    z-index: 9999;
+}
+
+.graph-card:fullscreen .graph-container {
+    width: 100%;
+    height: calc(100vh - 65px);
+}
+
+.graph-card:fullscreen .react-flow {
+    width: 100% !important;
+    height: 100% !important;
+}
+.workspace,
+.graph-card,
+.graph-container{
+
+    width:100%;
+
+}
+
+.question-panel{
+
+    min-height:300px;
+
+}
+
+.progress-panel{
+
+    min-height:250px;
+
+}

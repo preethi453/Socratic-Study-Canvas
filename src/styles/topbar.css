@@ -1,0 +1,367 @@
+/* ===========================
+   TOPBAR
+=========================== */
+
+.topbar{
+    height:72px;
+    background:#09090B;
+    border-bottom:1px solid #1F2937;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 28px;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-container{
+
+    width:420px;
+    height:46px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    background:#111827;
+
+    border:1px solid #1F2937;
+
+    border-radius:14px;
+
+    padding:0 16px;
+
+    transition:.25s;
+}
+
+.search-container:hover{
+
+    border-color:#374151;
+}
+
+.search-container:focus-within{
+
+    border-color:#7C3AED;
+
+    box-shadow:0 0 0 3px rgba(124,58,237,.15);
+}
+
+.search-container svg{
+
+    color:#94A3B8;
+}
+
+.search-container input{
+
+    flex:1;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:#F8FAFC;
+
+    font-size:15px;
+}
+
+.search-container input::placeholder{
+
+    color:#6B7280;
+}
+
+.shortcut{
+
+    background:#1F2937;
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+    padding:5px 10px;
+
+    border-radius:8px;
+}
+
+/* ===========================
+   RIGHT
+=========================== */
+
+.topbar-right{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ===========================
+   ICON BUTTONS
+=========================== */
+
+.top-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#111827;
+
+    border:1px solid #1F2937;
+
+    border-radius:12px;
+
+    color:#CBD5E1;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.top-icon:hover{
+
+    background:#1E293B;
+
+    color:white;
+}
+
+/* ===========================
+   NOTIFICATION
+=========================== */
+
+.notification-wrapper{
+
+    position:relative;
+}
+
+.notification{
+
+    position:relative;
+}
+
+.dot{
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    background:#8B5CF6;
+
+    border-radius:50%;
+
+    top:10px;
+    right:10px;
+}
+
+/* ===========================
+   PROFILE
+=========================== */
+
+.profile-wrapper{
+
+    position:relative;
+}
+
+.user-profile{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:4px 10px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.user-profile:hover{
+
+    background:#111827;
+}
+
+.user-avatar{
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#7C3AED;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-weight:700;
+}
+
+.user-profile span{
+
+    color:#F8FAFC;
+
+    font-size:15px;
+
+    font-weight:500;
+}
+
+.user-profile svg:last-child{
+
+    color:#94A3B8;
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.dropdown{
+
+    position:absolute;
+
+    top:56px;
+    right:0;
+
+    width:230px;
+
+    background:#111827;
+
+    border:1px solid #1F2937;
+
+    border-radius:14px;
+
+    padding:8px 0;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+    z-index:999;
+
+    animation:fade .18s ease;
+}
+
+.dropdown h4{
+
+    padding:10px 16px;
+
+    color:white;
+
+    border-bottom:1px solid #1F2937;
+
+    font-size:15px;
+}
+
+.dropdown p{
+
+    padding:14px 16px;
+
+    color:#94A3B8;
+
+    font-size:14px;
+}
+
+.menu-item{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 16px;
+
+    color:#F8FAFC;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.menu-item:hover{
+
+    background:#1E293B;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(-8px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.topbar{
+
+    padding:16px;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    height:auto;
+}
+
+.search-container{
+
+    width:100%;
+}
+
+.topbar-right{
+
+    width:100%;
+
+    justify-content:flex-end;
+}
+
+}
+
+@media(max-width:600px){
+
+.user-profile span{
+
+    display:none;
+}
+
+.shortcut{
+
+    display:none;
+}
+
+.search-container{
+
+    width:100%;
+}
+
+}

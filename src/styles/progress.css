@@ -1,0 +1,381 @@
+/* ==========================================
+   LEARNING ANALYTICS PANEL
+========================================== */
+
+.progress-panel{
+    background:#111827;
+    border:1px solid #1F2937;
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.progress-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.progress-header h2{
+    color:#F8FAFC;
+    font-size:20px;
+    font-weight:700;
+    margin:0;
+}
+
+.progress-header p{
+    margin-top:4px;
+    color:#94A3B8;
+    font-size:13px;
+}
+
+.progress-header svg{
+    color:#FACC15;
+}
+
+/* ==========================================
+   MASTERY
+========================================== */
+
+.mastery-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.mastery-ring{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            #8B5CF6 calc(var(--progress) * 1%),
+            #202938 0
+        );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+}
+
+.ring-inner{
+
+    width:88px;
+    height:88px;
+
+    border-radius:50%;
+
+    background:#111827;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.ring-inner h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+}
+
+.ring-inner span{
+
+    margin-top:4px;
+
+    color:#94A3B8;
+
+    font-size:12px;
+}
+
+.mastery-info{
+
+    flex:1;
+}
+
+.mastery-info h3{
+
+    margin:0;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+.mastery-info p{
+
+    margin-top:8px;
+
+    color:#94A3B8;
+
+    line-height:1.6;
+}
+
+/* ==========================================
+   METRICS
+========================================== */
+
+.metrics{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+}
+
+.metric-card{
+
+    background:#1A2236;
+
+    border:1px solid #2C3852;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.25s;
+}
+
+.metric-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#8B5CF6;
+}
+
+.metric-card svg{
+
+    color:#8B5CF6;
+}
+
+.metric-card strong{
+
+    display:block;
+
+    color:white;
+
+    font-size:20px;
+
+    margin-bottom:3px;
+}
+
+.metric-card span{
+
+    color:#94A3B8;
+
+    font-size:13px;
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.activity{
+
+    background:#1A2236;
+
+    border:1px solid #2C3852;
+
+    border-radius:16px;
+
+    padding:18px;
+}
+
+.activity-title{
+
+    margin:0 0 16px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.progress-track{
+
+    width:100%;
+
+    height:8px;
+
+    background:#2B354A;
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #7C3AED,
+        #A855F7
+    );
+
+    transition:width .4s ease;
+}
+
+.progress-text{
+
+    margin-top:12px;
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    text-align:right;
+}
+
+/* ==========================================
+   SUCCESS CARD
+========================================== */
+
+.success-card{
+
+    margin-top:18px;
+
+    background:linear-gradient(
+        135deg,
+        #064E3B,
+        #065F46
+    );
+
+    border:1px solid #10B981;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+}
+
+.success-icon{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.success-card h4{
+
+    margin:0;
+
+    color:white;
+
+    font-size:18px;
+}
+
+.success-card p{
+
+    margin-top:8px;
+
+    color:#D1FAE5;
+
+    line-height:1.5;
+
+    font-size:14px;
+}
+
+/* ==========================================
+   RESET BUTTON
+========================================== */
+
+.secondary-btn{
+
+    width:100%;
+
+    height:42px;
+
+    margin-top:auto;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1F2937;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.secondary-btn:hover{
+
+    background:#374151;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:900px){
+
+    .mastery-card{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .metrics{
+
+        grid-template-columns:1fr;
+    }
+
+    .progress-header{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+}
