@@ -1,0 +1,472 @@
+/* ==========================================
+   Upload Panel
+========================================== */
+
+.upload-panel{
+    background:#0F172A;
+    border:1px solid #1E293B;
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    margin-bottom:18px;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.upload-header{
+    margin-bottom:14px;
+}
+
+.upload-header h2{
+    margin:0;
+
+    color:#F8FAFC;
+
+    font-size:24px;
+
+    font-weight:700;
+}
+
+.upload-header p{
+    margin-top:4px;
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+/* ==========================================
+   Upload Area
+========================================== */
+
+.upload-box{
+
+    width:100%;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:#111827;
+
+    border:1.5px dashed #7C3AED;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.upload-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(124,58,237,.08),
+        transparent 70%);
+
+    pointer-events:none;
+}
+
+.upload-box:hover{
+
+    background:#151F33;
+
+    border-color:#9F67FF;
+}
+
+/* ==========================================
+   Upload Icon
+========================================== */
+
+.upload-icon{
+
+    width:36px;
+
+    height:36px;
+
+    color:#8B5CF6;
+}
+
+/* ==========================================
+   Upload Text
+========================================== */
+
+.upload-box h3{
+
+    margin:0;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+.upload-box p{
+
+    margin:0;
+
+    color:#94A3B8;
+
+    font-size:13px;
+}
+
+.upload-box small{
+
+    color:#64748B;
+
+    font-size:11px;
+}
+
+/* ==========================================
+   Browse Button
+========================================== */
+
+.browse-btn{
+
+    margin-top:6px;
+
+    height:38px;
+
+    padding:0 18px;
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.browse-btn:hover{
+
+    background:#2A364C;
+}
+
+/* ==========================================
+   Uploaded File
+========================================== */
+
+.file-card{
+
+    margin-top:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 16px;
+
+    background:#111827;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    transition:.25s;
+}
+
+.file-card:hover{
+
+    border-color:#8B5CF6;
+}
+
+.file-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.file-left svg{
+
+    color:#8B5CF6;
+}
+
+.file-info h4{
+
+    margin:0;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.file-info p{
+
+    margin-top:3px;
+
+    color:#94A3B8;
+
+    font-size:12px;
+}
+
+.remove-btn{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1E293B;
+
+    color:#CBD5E1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.remove-btn:hover{
+
+    background:#EF4444;
+
+    color:white;
+}
+/* ==========================================
+   Upload Actions
+========================================== */
+
+.upload-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:16px;
+}
+
+.generate-btn{
+
+    width:260px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #7C3AED,
+        #8B5CF6,
+        #A855F7
+    );
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    box-shadow:
+        0 10px 24px rgba(124,58,237,.25);
+}
+
+.generate-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 18px 40px rgba(124,58,237,.35);
+}
+
+.generate-btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+/* ==========================================
+   Upload + Paste Layout
+========================================== */
+
+.upload-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-top:16px;
+}
+
+/* ==========================================
+   Paste Notes
+========================================== */
+
+.paste-box{
+
+    background:#111827;
+
+    border:1px solid #263446;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:220px;
+}
+
+.paste-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:14px;
+}
+
+.paste-header svg{
+
+    color:#8B5CF6;
+}
+
+.paste-header h3{
+
+    margin:0;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+}
+
+.paste-textarea{
+
+    flex:1;
+
+    resize:none;
+
+    background:#0F172A;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    color:white;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.paste-textarea::placeholder{
+
+    color:#64748B;
+}
+
+.paste-textarea:focus{
+
+    border-color:#8B5CF6;
+
+    box-shadow:0 0 0 3px rgba(124,58,237,.15);
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:900px){
+
+    .upload-content{
+
+        grid-template-columns:1fr;
+    }
+
+    .upload-box{
+
+        min-height:140px;
+    }
+
+    .paste-box{
+
+        min-height:180px;
+    }
+
+    .generate-btn{
+
+        width:100%;
+    }
+}

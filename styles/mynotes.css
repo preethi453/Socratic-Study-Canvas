@@ -1,0 +1,237 @@
+.notes-page{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.notes-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.notes-header h1{
+    font-size:28px;
+    color:#fff;
+    margin-bottom:6px;
+}
+
+.notes-header p{
+    color:#94A3B8;
+    font-size:15px;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    width:320px;
+
+    padding:12px 16px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:white;
+    font-size:14px;
+}
+
+.note-editor{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    background:#111827;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.note-editor input,
+.note-editor textarea{
+
+    width:100%;
+
+    background:#1F2937;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.note-editor textarea{
+
+    resize:none;
+
+}
+
+.note-editor button{
+
+    width:180px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#7C3AED;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.note-editor button:hover{
+
+    background:#8B5CF6;
+
+    transform:translateY(-2px);
+
+}
+
+.notes-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+.note-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.25s;
+
+}
+
+.note-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#7C3AED;
+
+}
+
+.note-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.note-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.note-actions button{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1F2937;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.note-card h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.note-card p{
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:18px;
+
+}
+
+.note-card span{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+.pinned{
+
+    border-color:#F59E0B;
+
+}
