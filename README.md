@@ -170,12 +170,11 @@ This project demonstrates practical experience with:
 - Modern frontend development practices
 
 ---
+## Demo Video
 
-## License
+A short demonstration of the application's workflow is available here:
 
-This project is licensed under the MIT License.
-
----
+**Google Drive:** https://drive.google.com/file/d/1ridT95DueXkzCRP7yOQtlUcoCDxuYYD6/view?usp=drivesdk
 
 ## Author
 
