@@ -5,38 +5,30 @@ import "../styles/hero.css";
 function Hero() {
   return (
     <section className="hero">
+
       <div className="hero-left">
 
-        {/* Badge */}
-
-        <div className="hero-tag">
-          <Sparkles size={16} />
-          <span>AI Powered Learning Platform</span>
-        </div>
-
-        {/* Heading */}
+        <span className="hero-tag">
+          <Sparkles size={14} />
+          AI Powered Learning Platform
+        </span>
 
         <h1>
           Transform your notes
           <br />
-          <span>Into an Interactive Knowledge Graph</span>
+          <span>into an Interactive Knowledge Graph</span>
         </h1>
 
-        {/* Description */}
-
         <p>
-          Upload your study material and let AI intelligently transform
-          scattered notes into interactive concept maps, generate
-          meaningful insights, and guide your learning through Socratic
-          questioning.
+          Upload your study material and let AI generate meaningful
+          connections, insights, and Socratic questions to accelerate
+          your learning journey.
         </p>
-
-        {/* Buttons */}
 
         <div className="hero-buttons">
           <Link to="/login" className="primary-btn">
             Get Started
-            <ArrowRight size={18} />
+            <ArrowRight size={18}/>
           </Link>
 
           <a href="#features" className="secondary-btn">
@@ -44,28 +36,20 @@ function Hero() {
           </a>
         </div>
 
-        {/* Statistics */}
-
         <div className="hero-stats">
-
-          <div className="stat">
+          <div>
             <h2>98%</h2>
             <p>AI Accuracy</p>
           </div>
 
-          <div className="stat">
+          <div>
             <h2>24/7</h2>
             <p>AI Assistance</p>
           </div>
-
-          <div className="stat">
-            <h2>10K+</h2>
-            <p>Concepts Generated</p>
-          </div>
-
         </div>
 
       </div>
+
     </section>
   );
 }
